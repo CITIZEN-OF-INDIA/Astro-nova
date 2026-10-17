@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Astro Nova"
+description = "A premium, static astrology and spiritual guidance website for Astro Nova, with founder information, services, courses, reports, a numerology calculator, and safe payment instructions."
+version = "1.0.0"
+id = "artifacts/astro-nova"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25488
+
+[services.development]
+run = "pnpm --filter @workspace/astro-nova run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/astro-nova", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/astro-nova/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25488"
+BASE_PATH = "/"
