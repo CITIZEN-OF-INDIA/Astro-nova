@@ -12,7 +12,7 @@ import { calculateBirthNumbers, numberReflection } from './lib/numerology';
 
 const WHATSAPP_NUMBER = '';
 // Replace these local paths with owner-approved files at launch. Empty values intentionally keep the designed fallbacks visible.
-const OWNER_ASSETS = { logo:'', founderPortrait:'', paymentQr:'' };
+const OWNER_ASSETS = { logo:'/astro-nova-logo.jpg', founderPortrait:'', paymentQr:'' };
 const navLinks = [
   ['About','/about'],['Astrology','/astrology'],['Numerology','/numerology'],
   ['Vastu','/vastu'],['Palmistry','/palmistry'],['Consultations','/consultations'],
@@ -41,7 +41,7 @@ function CosmicBackdrop({ compact = false }: { compact?: boolean }) {
 
 function Logo() {
   return <Link to="/" className="group inline-flex items-center gap-3" data-testid="link-logo">
-    {OWNER_ASSETS.logo ? <img src={OWNER_ASSETS.logo} alt="Astro Nova" className="h-10 w-10 rounded-full object-contain"/> : <span className="relative grid h-10 w-10 place-items-center rounded-full border border-amber-200/40 bg-amber-100/[.04] text-amber-200">
+    {OWNER_ASSETS.logo ? <img src={OWNER_ASSETS.logo} alt="Astro Nova" className="h-10 w-10 rounded-full object-cover"/> : <span className="relative grid h-10 w-10 place-items-center rounded-full border border-amber-200/40 bg-amber-100/[.04] text-amber-200">
       <Orbit size={19} strokeWidth={1.4} /><span className="absolute h-1.5 w-1.5 rounded-full bg-cyan-200 shadow-[0_0_12px_#22d3ee]" />
     </span>}
     <span className="leading-tight"><span className="block text-[13px] font-semibold tracking-[.27em] text-[#fff8eb]">ASTRO NOVA</span><span className="mt-1 block text-[9px] tracking-[.19em] text-[#aaa6c9]">ANCIENT WISDOM · MODERN CLARITY</span></span>
