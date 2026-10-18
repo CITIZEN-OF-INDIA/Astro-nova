@@ -1,6 +1,6 @@
-# Astro Nova
+# Nova Astro Zone
 
-Astro Nova is a React single-page site built with Vite, TypeScript, and Tailwind CSS. The deployable frontend lives in `artifacts/astro-nova`; the repository also contains shared workspace packages and a small Express API.
+Nova Astro Zone is a React single-page site built with Vite, TypeScript, and Tailwind CSS. The deployable frontend lives in `artifacts/astro-nova`; the repository also contains shared workspace packages and a small Express API.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ The static site is written to `artifacts/astro-nova/dist/public`.
 
 ## Deploy to Vercel
 
-Import this repository into Vercel and leave the project root directory set to the repository root. The root `vercel.json` installs the pnpm workspace, builds the Astro Nova frontend, publishes its static output, and routes client-side paths back to the SPA entry point. No environment variables are required for the current frontend.
+Import this repository into Vercel and leave the project root directory set to the repository root. The root `vercel.json` installs the pnpm workspace, builds the Nova Astro Zone frontend, publishes its static output, and routes client-side paths back to the SPA entry point. No environment variables are required for the current frontend.
 
 ## Publish to GitHub
 
