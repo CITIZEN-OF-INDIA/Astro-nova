@@ -12,7 +12,7 @@ import { calculateBirthNumbers, numberReflection } from './lib/numerology';
 
 const WHATSAPP_NUMBER = '';
 // Replace these local paths with owner-approved files at launch. Empty values intentionally keep the designed fallbacks visible.
-const OWNER_ASSETS = { logo:'/astro-nova-logo.jpg', founderPortrait:'/founder-portrait.jpg', paymentQr:'' };
+const OWNER_ASSETS = { logo:'/astro-nova-logo.jpg', founderPortrait:'/founder-portrait.jpg', paymentQr:'/payment-qr.jpg' };
 const navLinks = [
   ['About','/about'],['Astrology','/astrology'],['Numerology','/numerology'],
   ['Vastu','/vastu'],['Palmistry','/palmistry'],['Consultations','/consultations'],
