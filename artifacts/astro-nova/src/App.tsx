@@ -163,7 +163,7 @@ function ServiceCards({limit}:{limit?:number}) {
 
 function CourseCards({filterable=true,featured=false}:{filterable?:boolean;featured?:boolean}) {
   const [filter,setFilter]=useState('All');const options=['All','Numerology','Vedic Astrology','Advanced Consultation Training'];
-  const categoryFor=(course:Item)=>course.slug.includes('numerology')?'Numerology':course.slug==='astrology-consultation-mastery'?'Advanced Consultation Training':'Vedic Astrology';
+  const categoryFor=(course:Item)=>course.slug.includes('numerolog')?'Numerology':course.slug==='astrology-consultation-mastery'?'Advanced Consultation Training':'Vedic Astrology';
   const list=filterable?courses.filter(c=>filter==='All'||categoryFor(c)===filter):courses;
   return <><div className="mb-7 flex flex-wrap gap-2">{filterable&&options.map(f=><button key={f} onClick={()=>setFilter(f)} aria-pressed={filter===f} className={`filter-chip ${filter===f?'filter-chip-active':''}`} data-testid={`filter-course-${f.toLowerCase().replaceAll(' ','-')}`}>{f}</button>)}</div>
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{(featured?list.slice(0,3):list).map(c=><article className="glass flex flex-col rounded-[22px] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-200/30" key={c.slug} data-testid={`card-course-${c.slug}`}>
